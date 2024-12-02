@@ -11,7 +11,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [ubuntu-24.04, windows-2022, macos-12]
+        os: [ubuntu-24.04, windows-2022, macos-15]
         compiler: [gnu, msvc, clang]
         arch: [x86, x64]
 
@@ -19,13 +19,13 @@ jobs:
         - os: ubuntu-24.04
           compiler: msvc
 
-        - os: macos-12
+        - os: macos-15
           compiler: msvc
 
-        - os: macos-12
+        - os: macos-15
           compiler: gnu
 
-        - os: macos-12
+        - os: macos-15
           arch: x86
 
         - os: ubuntu-24.04
@@ -46,18 +46,18 @@ jobs:
           nproc: -j4
           mkdir_force: -Force
 
-        - os: macos-12
+        - os: macos-15
           nproc: "-j$(sysctl -n hw.ncpu)"
           mkdir_force: -p
 
         - compiler: gnu
-          cc: gcc-12
-          cxx: g++-12
-          ccmac: gcc-12
-          cxxmac: g++-12
+          cc: gcc-14
+          cxx: g++-14
+          ccmac: gcc-14
+          cxxmac: g++-14
 
         - compiler: clang
-          cc: clang-14
+          cc: clang-16
           cxx: clang++-14
           ccmac: clang
           cxxmac: clang++
