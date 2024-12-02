@@ -11,12 +11,12 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [ubuntu-22.04, windows-2022, macos-12]
+        os: [ubuntu-24.04, windows-2022, macos-12]
         compiler: [gnu, msvc, clang]
         arch: [x86, x64]
 
         exclude:
-        - os: ubuntu-22.04
+        - os: ubuntu-24.04
           compiler: msvc
 
         - os: macos-12
@@ -28,7 +28,7 @@ jobs:
         - os: macos-12
           arch: x86
 
-        - os: ubuntu-22.04
+        - os: ubuntu-24.04
           arch: x86
 
         - os: windows-2022
@@ -38,7 +38,7 @@ jobs:
           compiler: clang
 
         include:
-        - os: ubuntu-22.04
+        - os: ubuntu-24.04
           nproc: "-j$(nproc)"
           mkdir_force: -p
         
