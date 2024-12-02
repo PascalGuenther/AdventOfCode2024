@@ -87,7 +87,7 @@ jobs:
   
     - name: Configure CMake for Windows
       if: runner.os == 'Windows'
-      run: cmake -S ${{github.workspace}} -B ${{github.workspace}}/build -G "Visual Studio 17 2024" ${{ matrix.archWin }}
+      run: cmake -S ${{github.workspace}} -B ${{github.workspace}}/build -G "Visual Studio 17 2022" ${{ matrix.archWin }}
 
     - name: Configure CMake for macOS
       if: runner.os == 'macOS'
