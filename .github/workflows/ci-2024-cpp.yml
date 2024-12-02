@@ -58,7 +58,7 @@ jobs:
 
         - compiler: clang
           cc: clang-16
-          cxx: clang++-14
+          cxx: clang++-16
           ccmac: clang
           cxxmac: clang++
 
