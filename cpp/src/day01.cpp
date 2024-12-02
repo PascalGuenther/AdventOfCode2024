@@ -6,7 +6,6 @@
 #include <algorithm>
 #include <memory>
 #include <numeric>
-#include <ranges>
 #include <string_view>
 #include <utility>
 #include <vector>
