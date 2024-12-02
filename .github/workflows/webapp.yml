@@ -1,4 +1,6 @@
 name: Deploy-Webapp
+permissions:
+  contents: write
 
 on:
   push:
@@ -21,10 +23,7 @@ jobs:
       # Build your program with the given configuration
       run: cmake --build ${{github.workspace}}/build --target aoc-2024-web -j8
 
-    - name: Deploy webapp to Github pages
-      uses: JamesIves/github-pages-deploy-action@v4.4.1
+    - name: Deploy 🚀
+      uses: JamesIves/github-pages-deploy-action@v4
       with:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        BRANCH: gh-pages
-        FOLDER: build/bin/aoc-2024-www
-
+        folder: build/bin/aoc-2024-www # The folder the action should deploy.
