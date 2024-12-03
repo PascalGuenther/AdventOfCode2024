@@ -75,7 +75,7 @@ namespace {
             for(size_t drop = 0u; drop != numberOfLevels; ++drop)
             {
                 Row rowWithOneElementDropped{row};
-                rowWithOneElementDropped.erase(rowWithOneElementDropped.begin() + static_cast<ssize_t>(drop));
+                rowWithOneElementDropped.erase(rowWithOneElementDropped.begin() + static_cast<int>(drop));
                 if(is_safe(rowWithOneElementDropped))
                 {
                     return true;
