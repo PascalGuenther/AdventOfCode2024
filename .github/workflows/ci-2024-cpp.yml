@@ -57,8 +57,8 @@ jobs:
           cxxmac: g++-14
 
         - compiler: clang
-          cc: clang-19
-          cxx: clang++-19
+          cc: clang-18
+          cxx: clang++-18
           ccmac: clang
           cxxmac: clang++
 
