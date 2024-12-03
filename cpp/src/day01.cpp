@@ -61,7 +61,7 @@ namespace {
 
     AOC_Y2024_CONSTEXPR auto part_2(const auto &parsedInput)
     {
-        int similarity{0};
+        long int similarity{0};
         for(const auto &l : parsedInput.left)
         {
             similarity += l * std::count(parsedInput.right.begin(), parsedInput.right.end(), l);

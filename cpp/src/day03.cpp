@@ -20,7 +20,7 @@ namespace {
     enum Instruction {mul, do_, dont,};
     struct Operation {
         Instruction instruction;
-        std::pair<Operand, Operand> operands;
+        std::pair<Operand, Operand> operands{};
     };
     using Parsed = std::vector<Operation>;
 
