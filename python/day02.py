@@ -40,6 +40,5 @@ def part2(input: str):
 
  
 if __name__ == '__main__':
-    print(input)
     input = sys.stdin.read()
     print((part1(input), part2(input)))
