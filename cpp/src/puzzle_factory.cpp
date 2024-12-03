@@ -4,6 +4,7 @@
 
 #define AOC_Y2024_SUPPORTED_PUZZLES_LIST(xMacro)                   \
     xMacro(01)                                                     \
+    xMacro(02)                                                     \
 
 namespace AOC::Y2024
 {
